@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.dexfun.yiku.widget.SquareLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/icon"
+            android:layout_width="56px"
+            android:layout_height="56px"
+            android:scaleType="fitCenter"
+            android:src="@mipmap/ic_launcher" />
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6px"
+            android:text="标题"
+            android:textColor="#FF1A1A1A"
+            android:textSize="12px" />
+    </LinearLayout>
+
+</com.dexfun.yiku.widget.SquareLinearLayout>

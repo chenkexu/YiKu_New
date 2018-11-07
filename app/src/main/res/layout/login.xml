@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#BF252525"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="236px"
+        android:layout_height="148px"
+        android:background="@drawable/circle_border"
+        android:orientation="vertical">
+        <ImageView
+            android:id="@+id/close"
+            android:layout_width="10px"
+            android:layout_height="10px"
+            android:src="@mipmap/close"
+            android:layout_marginLeft="209px"
+            android:layout_marginTop="8px"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="17px"
+            android:text="使用手机号码登陆"
+            android:textColor="#FF666666"
+            android:textSize="12px"
+            android:layout_marginTop="23px"
+            android:layout_marginLeft="20px"
+            />
+        <EditText
+            android:id="@+id/input_phone"
+            android:layout_width="wrap_content"
+            android:layout_height="17px"
+            android:text="14134567899"
+            android:textColor="#FF1A1A1A"
+            android:textSize="12px"
+            android:gravity="center_vertical"
+            android:layout_marginLeft="19px"
+            android:layout_marginTop="50.5px"
+            />
+        <View
+            android:layout_width="190px"
+            android:layout_height="0.5px"
+            android:background="#FF1A1A1A"
+            android:layout_marginTop="78.5px"
+            android:layout_marginLeft="22px"/>
+        <TextView
+            android:id="@+id/clear"
+            android:layout_width="11px"
+            android:layout_height="11px"
+            android:text="×"
+            android:background="@drawable/clear"
+            android:layout_marginLeft="195px"
+            android:layout_marginTop="55px"
+            android:gravity="center"
+            android:textColor="#FFFFFF"
+            android:textSize="5px"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="17px"
+            android:text="使用其他方式登陆："
+            android:textColor="#FF666666"
+            android:textSize="12px"
+            android:layout_marginLeft="22px"
+            android:layout_marginTop="102px"
+            />
+        <ImageView
+            android:id="@+id/qq"
+            android:layout_width="28px"
+            android:layout_height="28px"
+            android:src="@mipmap/qq1"
+            android:layout_marginLeft="142px"
+            android:layout_marginTop="97px"/>
+        <ImageView
+            android:id="@+id/WeChat"
+            android:layout_width="28px"
+            android:layout_height="28px"
+            android:src="@mipmap/weixin1"
+            android:layout_marginLeft="186px"
+            android:layout_marginTop="97px"/>
+
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/xiayibu"
+        android:layout_width="36px"
+        android:layout_height="36px"
+        android:layout_marginTop="30.6px"
+        android:src="@mipmap/kaquan" />
+
+</LinearLayout>

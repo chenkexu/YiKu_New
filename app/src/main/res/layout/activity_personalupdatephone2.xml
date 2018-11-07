@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.dexfun.yiku.activity.UpdatePhoneActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <include layout="@layout/include_toolbar_left_btn" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="#FFEFEFEF" />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="60px">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="20px"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="20px"
+                android:gravity="center"
+                android:text="当前绑定手机号"
+                android:textColor="#FF1A1A1A"
+                android:textSize="14px" />
+
+            <TextView
+                android:id="@+id/pd_telephonenumber"
+                android:layout_width="wrap_content"
+                android:layout_height="20px"
+                android:layout_gravity="right|center_vertical"
+                android:layout_marginRight="20px"
+                android:gravity="center"
+                android:textColor="#FF1A1A1A"
+                android:textSize="14px" />
+        </FrameLayout>
+
+        <View
+            android:layout_width="375px"
+            android:layout_height="10px"
+            android:background="#FFF8F8F8" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="60px">
+
+            <EditText
+                android:id="@+id/pd_newtelephonenumber"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="20px"
+                android:background="@null"
+                android:hint="请输入新手机号"
+                android:inputType="number"
+                android:maxLength="11"
+                android:textColorHint="#FFAFAFAF"
+                android:textSize="14px" />
+
+            <TextView
+                android:id="@+id/pd_sendconde"
+                android:layout_width="wrap_content"
+                android:layout_height="17px"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="25dp"
+                android:gravity="center"
+                android:text="发送验证码"
+                android:textColor="@color/colorAccent"
+                android:textSize="12px" />
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_marginLeft="20px"
+            android:background="#FFF5F5F5" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="60px">
+
+            <EditText
+                android:id="@+id/tv_code"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="20px"
+                android:background="@null"
+                android:digits="0123456789"
+                android:hint="收到的验证码"
+                android:inputType="number"
+                android:maxLength="8"
+                android:textColorHint="#FFAFAFAF"
+                android:textSize="14px" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="60px">
+
+            <TextView
+                android:id="@+id/tv_code2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="20px"
+                android:background="@null"
+                android:gravity="center_vertical"
+                android:hint="选择院校（选填）"
+                android:inputType="number"
+                android:maxLength="8"
+                android:textColorHint="#FFAFAFAF"
+                android:textSize="14px" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#FFF8F8F8"
+            android:gravity="center_horizontal">
+
+            <Button
+                android:id="@+id/btn_go"
+                android:layout_width="279px"
+                android:layout_height="40px"
+                android:layout_marginTop="100px"
+                android:background="@color/colorAccent"
+                android:gravity="center"
+                android:text="确认"
+                android:textColor="#FFFFFFFF"
+                android:textSize="12px" />
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+</RelativeLayout>

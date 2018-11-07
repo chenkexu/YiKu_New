@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center">
+
+    <FrameLayout
+        android:layout_width="266px"
+        android:layout_height="66px">
+
+        <ImageView
+            android:id="@+id/img"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@mipmap/e1" />
+
+        <TextView
+            android:id="@+id/p"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="6px"
+            android:layout_marginTop="6px"
+            android:text="150"
+            android:textColor="#FFF34520"
+            android:textSize="36px"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/ps"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginBottom="5px"
+            android:layout_marginLeft="66px"
+            android:layout_marginTop="3px"
+            android:text="元"
+            android:textColor="#FFF34520"
+            android:textSize="10px" />
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:layout_marginBottom="5px"
+            android:layout_marginRight="98px"
+            android:layout_marginTop="9px"
+            android:text="新人专享"
+            android:textColor="#FF1A1A1A"
+            android:textSize="24px" />
+
+        <TextView
+            android:id="@+id/time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right|bottom"
+            android:layout_marginBottom="5px"
+            android:layout_marginRight="85px"
+            android:text="8月1日前使用"
+            android:textColor="#FF999999"
+            android:textSize="12px" />
+
+        <View
+            android:id="@+id/btn_red"
+            android:layout_width="86px"
+            android:layout_height="66px"
+            android:layout_gravity="right" />
+
+    </FrameLayout>
+</LinearLayout>

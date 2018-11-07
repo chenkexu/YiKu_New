@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20px"
+        android:layout_marginRight="20px"
+        android:orientation="horizontal">
+
+        <com.dexfun.yiku.widget.timelineview.TimelineView
+            android:id="@+id/time_marker"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            app:line="#FFAFAFAF"
+            app:lineSize="1dp"
+            app:markerSize="11dp" />
+
+        <LinearLayout
+            android:layout_marginTop="20px"
+            android:layout_marginBottom="20px"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="20px"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:id="@+id/tv_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="[北京市]【已签收，签收人是彭于晏】，感谢使用百世快递，期待再次为您服务"
+                android:textColor="#FFFF6D6A"
+                android:textSize="13px" />
+
+            <TextView
+                android:id="@+id/tv_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10px"
+                android:text="2017-11-11 18:19:22"
+                android:textColor="#FFFF6D6A"
+                android:textSize="13px" />
+
+        </LinearLayout>
+    </LinearLayout>
+</FrameLayout>

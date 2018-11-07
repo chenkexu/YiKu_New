@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.dexfun.yiku.activity.BrandDetailActivity">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="43px">
+
+        <ImageView
+            android:id="@+id/back"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:paddingLeft="20px"
+            android:scaleType="centerInside"
+            android:src="@mipmap/back" />
+
+        <TextView
+            android:id="@+id/title_w"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textColor="#FF1A1A1A"
+            android:textSize="18px"
+            android:textStyle="bold" />
+    </FrameLayout>
+
+    <com.scwang.smartrefresh.layout.SmartRefreshLayout
+        android:id="@+id/home_refresh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:srlEnableAutoLoadmore="false"
+        app:srlEnableNestedScrolling="true"
+        app:srlEnableRefresh="false">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+
+                    <ImageView
+                        android:id="@+id/brand_image"
+                        android:layout_width="match_parent"
+                        android:layout_height="282px" />
+
+
+                </FrameLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingLeft="20px"
+                    android:paddingTop="20px">
+
+                    <ImageView
+                        android:id="@+id/brand_icon"
+                        android:layout_width="60px"
+                        android:layout_height="60px" />
+
+                    <TextView
+                        android:id="@+id/brand_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10px"
+                        android:gravity="center"
+                        android:text="Supreme"
+                        android:textColor="#FF1A1A1A"
+                        android:textSize="14px" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/brand_dsc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20px"
+                    android:layout_marginRight="20px"
+                    android:layout_marginTop="20px"
+                    android:text="Supreme1994年秋季诞生于美国纽约曼哈顿，由James Jebbia创办。supreme的本意是最高、至上的。Supreme是结合滑板、Hip-hop等文化并以滑板为主的美国街头服饰品牌。"
+                    android:textColor="#FF676869"
+                    android:textSize="13px" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:layout_marginTop="20px"
+                    android:background="#FFF5F5F5" />
+
+                <android.support.design.widget.TabLayout
+                    android:id="@+id/brand_xl"
+                    android:layout_width="match_parent"
+                    android:layout_height="44px"
+                    app:tabMode="scrollable">
+
+                </android.support.design.widget.TabLayout>
+
+                <com.dexfun.yiku.widget.CustomGridView
+                    android:id="@+id/brand_list"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:numColumns="2">
+
+                </com.dexfun.yiku.widget.CustomGridView>
+
+            </LinearLayout>
+        </ScrollView>
+    </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+</LinearLayout>

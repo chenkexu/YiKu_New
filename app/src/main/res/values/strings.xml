@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">衣库</string>
+    <string name="app_share_info">衣库共享衣橱，首月149元，上万件大牌时装无限换穿！</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

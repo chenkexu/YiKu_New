@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/icon"
+        android:adjustViewBounds="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scaleType="centerCrop" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="24px"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_title"
+                android:layout_width="wrap_content"
+                android:layout_height="25px"
+                android:text="# 不爱露正脸之背影杀 #"
+                android:textColor="#FF133C66"
+                android:textSize="18px" />
+
+            <Button
+                android:id="@+id/btn_go"
+                android:layout_width="70px"
+                android:layout_height="25px"
+                android:layout_gravity="right"
+                android:background="#FFFDDD55"
+                android:text="参加挑战"
+                android:textColor="#FF1A1A1A"
+                android:textSize="12px" />
+        </FrameLayout>
+
+        <TextView
+            android:id="@+id/tv_sub_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14px"
+            android:text="6月-7月，带话题并晒出自己最美的背影照参与本次活动，每周点赞前三名可获得7天加时卡一张，快来参加吧！"
+            android:textColor="#FF1A1A1A"
+            android:textSize="14px" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="10px"
+        android:background="#FFF4F4F4" />
+
+</LinearLayout>

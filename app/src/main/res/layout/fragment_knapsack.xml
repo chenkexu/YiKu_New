@@ -1,0 +1,142 @@
+<com.dexfun.layout.DexLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.dexfun.yiku.fragment.KnapsackFragment">
+
+    <!--<include layout="@layout/include_toolbar_right_text" />-->
+
+    <!--<View-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="1px"-->
+        <!--android:layout_marginLeft="8dp"-->
+        <!--android:layout_marginRight="8dp"-->
+        <!--android:background="#FFF5F5F5" />-->
+
+    <com.kennyc.view.MultiStateView
+        android:id="@+id/load_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:msv_emptyView="@layout/load_knapsack_empty_view"
+        app:msv_errorView="@layout/load_knapsack_login_view"
+        app:msv_loadingView="@layout/load_progress_view">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <com.dexfun.yiku.widget.CustomListView
+                    android:id="@+id/knapsack_lv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:divider="#ffff"
+                    android:dividerHeight="0.01px" />
+            </ScrollView>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="#FFF5F5F5" />
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:id="@+id/button_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="37px">
+
+                    <Button
+                        android:id="@+id/user_buy_card"
+                        android:layout_width="135px"
+                        android:layout_height="50px"
+                        android:background="#FFEE2D2D"
+                        android:text="购买加衣劵"
+                        android:textColor="#FFFFFFFF"
+                        android:textSize="16px"
+                        android:visibility="gone" />
+
+                    <CheckBox
+                        android:id="@+id/user_card"
+                        android:layout_width="188px"
+                        android:layout_height="50px"
+                        android:layout_marginLeft="12px"
+                        android:background="#FFFFFFFF"
+                        android:text="  使用加衣劵"
+                        android:textColor="#FF1A1A1A"
+                        android:textSize="16px" />
+
+                    <!--<Button-->
+                        <!--android:id="@+id/knapsack_btn"-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="50px"-->
+                        <!--android:background="@drawable/btu_yidai"-->
+                        <!--android:gravity="center"-->
+                        <!--android:text="确认衣袋"-->
+                        <!--android:textColor="#FFFFFFFF"-->
+                        <!--android:textSize="14px"-->
+                        <!--android:visibility="gone"-->
+                        <!--/>-->
+                    <Button
+                        android:id="@+id/knapsack_btn"
+                        android:layout_width="163px"
+                        android:layout_height="36px"
+                        android:background="@drawable/btu_yidai"
+                        android:gravity="center"
+                        android:text="确认衣袋"
+                        android:textColor="#FFFFFFFF"
+                        android:textSize="14px"
+                        />
+
+
+                </LinearLayout>
+
+
+
+                <LinearLayout
+                    android:id="@+id/vi_gr"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:id="@+id/btn_select_all"
+                        android:layout_width="108px"
+                        android:layout_height="50px"
+                        android:background="#FFF5F5F5"
+                        android:gravity="center"
+                        android:text="全选"
+                        android:textColor="#FF1A1A1A"
+                        android:textSize="14px" />
+
+                    <Button
+                        android:id="@+id/btn_delete"
+                        android:layout_width="match_parent"
+                        android:layout_height="50px"
+                        android:background="#FFEE2D2D"
+                        android:gravity="center"
+                        android:text="删除"
+                        android:textColor="#FFFFFFFF"
+                        android:textSize="16px" />
+                </LinearLayout>
+            </FrameLayout>
+
+
+        </LinearLayout>
+
+    </com.kennyc.view.MultiStateView>
+</com.dexfun.layout.DexLinearLayout>

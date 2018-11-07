@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.dexfun.yiku">
+
+    <!-- 个推SDK权限配置开始 -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <!-- 系统拨号权限 -->
+    <!-- <uses-permission android:name="android.permission.CALL_PHONE" /> -->
+    <!-- 支持iBeancon 需要蓝牙权限 -->
+    <!-- <uses-permission android:name="android.permission.BLUETOOTH" /> -->
+    <!-- <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" /> -->
+    <!-- 支持个推3.0 电子围栏功能 -->
+    <!-- <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" /> -->
+    <!-- <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" /> -->
+    <!-- 浮动通知权限 -->
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <!-- 自定义权限 -->
+    <uses-permission android:name="getui.permission.GetuiService.${applicationId}" />
+
+    <permission
+        android:name="getui.permission.GetuiService.${applicationId}"
+        android:protectionLevel="normal" />
+
+    <!-- 个推SDK权限配置结束 -->
+    <application
+        android:name=".MainClass"
+        android:allowBackup="true"
+        android:icon="@drawable/icon"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme.NoActionBar">
+        <meta-data
+            android:name="design_width"
+            android:value="375" />
+        <meta-data
+            android:name="design_height"
+            android:value="647" />
+        <!-- 替换为在友盟后台申请的应用Appkey -->
+        <meta-data
+            android:name="UMENG_APPKEY"
+            android:value="5a684381f43e480be000002d" />
+        <!-- 应用的推广渠道名称，Channel ID自定义 -->
+        <meta-data
+            android:name="UMENG_CHANNEL"
+            android:value="Channel ID" />
+        <!-- 个推SDK配置开始 -->
+        <!-- 配置的第三方参数属性 -->
+        <meta-data
+            android:name="PUSH_APPID"
+            android:value="${GETUI_APP_ID}" />
+        <meta-data
+            android:name="PUSH_APPKEY"
+            android:value="${GETUI_APP_KEY}" />
+        <meta-data
+            android:name="PUSH_APPSECRET"
+            android:value="${GETUI_APP_SECRET}" />
+
+        <!-- MID3.5(mid-sdk-3.5.jar) 以上版本请务必增加此配置 -->
+        <provider
+            android:name="com.tencent.mid.api.MidProvider"
+            android:authorities="${applicationId}.TENCENT.MID.V3"
+            android:exported="true" />
+
+        <meta-data
+            android:name="TA_APPKEY"
+            android:value="${MTA_APPKEY}" />
+        <meta-data
+            android:name="InstallChannel"
+            android:value="${MTA_CHANNEL}" />
+
+        <activity
+            android:name=".HomeActivity"
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".LauncherActivity"
+            android:theme="@style/AppTheme.NoActionBar.L">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="ykapp" />
+            </intent-filter>
+        </activity>
+
+        <!-- 配置SDK核心服务 -->
+        <service
+            android:name="com.igexin.sdk.PushService"
+            android:exported="true"
+            android:label="NotificationCenter"
+            android:process=":pushservice">
+            <intent-filter>
+                <action android:name="com.igexin.sdk.action.service.message" />
+            </intent-filter>
+        </service>
+
+        <receiver android:name="com.igexin.sdk.PushReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+                <action android:name="android.intent.action.USER_PRESENT" />
+                <action android:name="com.igexin.sdk.action.refreshls" />
+                <!-- 以下三项为可选的action声明，可大大提高service存活率和消息到达速度 -->
+                <action android:name="android.intent.action.MEDIA_MOUNTED" />
+                <action android:name="android.intent.action.ACTION_POWER_CONNECTED" />
+                <action android:name="android.intent.action.ACTION_POWER_DISCONNECTED" />
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name="com.igexin.sdk.PushActivity"
+            android:excludeFromRecents="true"
+            android:exported="false"
+            android:process=":pushservice"
+            android:taskAffinity="com.igexin.sdk.PushActivityTask"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <activity
+            android:name="com.igexin.sdk.GActivity"
+            android:excludeFromRecents="true"
+            android:exported="true"
+            android:process=":pushservice"
+            android:taskAffinity="com.igexin.sdk.PushActivityTask"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+
+        <service
+            android:name=".DemoPushService"
+            android:exported="true"
+            android:label="PushService"
+            android:process=":pushservice" />
+        <service android:name=".DemoIntentService" />
+        <!-- 个推SDK配置结束 -->
+        <!-- weixin -->
+        <activity
+            android:name=".wxapi.WXPayEntryActivity"
+            android:exported="true"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/TranslucentTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data android:scheme="wx08491f30bacfc1ce" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".activity.OrderSuccessfulActivity" />
+        <activity android:name=".activity.ReceiverAddressActivity" />
+        <activity android:name=".activity.AddAddressActivity" />
+        <activity android:name=".activity.PocketActivity" />
+        <activity android:name=".activity.SettingActivity" />
+        <activity
+            android:name=".activity.MessageActivity"
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".activity.LoginActivity"
+            android:launchMode="singleTask"
+            />
+        <activity android:name=".activity.DetailActivity" />
+        <activity android:name=".activity.BrandDetailActivity" />
+        <activity android:name=".activity.UserInfoActivity" />
+        <activity android:name=".activity.FAQActivity" />
+        <activity android:name=".activity.LogisticsDetailsActivity" />
+        <activity android:name=".activity.UpdatePhoneActivity" />
+        <activity android:name=".activity.NextKnapsackActivity" />
+        <activity android:name=".activity.WalletActivity" />
+        <activity
+            android:name=".activity.PayDialogClass"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.TranslucentTheme" />
+        <activity android:name=".activity.CartActivity" />
+        <activity android:name=".activity.EditAddressActivity" />
+        <activity android:name=".activity.BuyCardActivity" />
+        <activity android:name=".activity.BuyListActivity" />
+        <activity android:name=".activity.DepositActivity" />
+        <activity android:name=".activity.ReturnActivity" />
+        <activity android:name=".activity.BrandListActivity" />
+        <activity android:name=".activity.ShareActivity" />
+        <activity
+            android:name=".wxapi.WXEntryActivity"
+            android:exported="true"
+            android:launchMode="singleTop">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data android:scheme="sdksample" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".activity.LogisticsListActivity" />
+        <activity android:name=".activity.ViewPagerActivity" />
+        <activity
+            android:name=".activity.WebViewActivity"
+            android:process=":fun.web" />
+        <activity android:name=".activity.AboutActivity" />
+        <activity android:name=".activity.UpdatePhoneActivity2" />
+        <activity android:name=".activity.UPActivity" />
+        <!-- 会话界面 -->
+        <activity
+            android:name=".activity.ConversationActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data
+                    android:host="${applicationId}"
+                    android:pathPrefix="/conversation/"
+                    android:scheme="rong" />
+            </intent-filter>
+        </activity>
+
+        <!-- <provider -->
+        <!-- android:name="android.support.v4.content.FileProvider" -->
+        <!-- android:authorities="${applicationId}.FileProvider" -->
+        <!-- android:exported="false" -->
+        <!-- android:grantUriPermissions="true"> -->
+        <!-- <meta-data -->
+        <!-- android:name="android.support.FILE_PROVIDER_PATHS" -->
+        <!-- android:resource="@xml/rc_file_path" /> -->
+        <!-- </provider> -->
+
+        <activity android:name=".activity.ActiveActivity" />
+        <activity android:name=".activity.SystemActivity" />
+        <activity android:name=".activity.InviteActivity" />
+        <activity
+            android:name=".activity.DateDialogClass"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.TranslucentTheme" />
+        <activity android:name=".activity.PicViewActivity" />
+        <activity android:name=".activity.AddArticleActivity" />
+        <activity android:name=".activity.PushArticleActivity" />
+        <activity android:name=".activity.DetailCommunityActivity" />
+        <activity android:name=".activity.SizeTabActivity" />
+        <activity
+            android:name=".activity.RegisterActivity"
+            />
+        <activity android:name=".activity.LogisticsDetailsActivity2" />
+        <activity android:name=".activity.SchoolListActivity" />
+        <activity android:name=".activity.adapter.test.SchoolListActivity2" />
+        <activity android:name=".activity.ActivitiesActivity" />
+        <activity android:name=".activity.PSDetailActivity" />
+        <activity android:name=".activity.CouponsListActivity" />
+        <activity android:name=".activity.adapter.ArticleDetailsActivity" />
+        <activity android:name=".activity.RenQiActivity" />
+        <activity android:name=".activity.getAddCardActivity" />
+        <activity android:name=".activity.CollectionActivity" />
+        <activity android:name=".activity.ShoppingCartActivity" />
+        <activity android:name=".activity.ZYWActivity"></activity>
+    </application>
+
+</manifest>

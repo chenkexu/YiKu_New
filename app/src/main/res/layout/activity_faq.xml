@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.dexfun.yiku.activity.FAQActivity">
+
+    <include layout="@layout/include_toolbar_left_btn" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="#FFEFEFEF" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingLeft="20px">
+
+            <FrameLayout
+                android:id="@+id/rentclothesrule"
+                android:layout_width="match_parent"
+                android:layout_height="60px">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical">
+
+                    <ImageView
+                        android:layout_width="16px"
+                        android:layout_height="16px"
+                        android:src="@mipmap/zuyi" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="20px"
+                        android:layout_marginLeft="6px"
+                        android:text="租衣规则"
+                        android:textColor="#FF1A1A1A"
+                        android:textSize="14px"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="6px"
+                    android:layout_height="12px"
+                    android:layout_gravity="right|center"
+                    android:layout_marginRight="20px"
+                    android:src="@mipmap/right" />
+            </FrameLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="#FFEFEFEF" />
+
+            <FrameLayout
+                android:id="@+id/backclothesrule"
+                android:layout_width="match_parent"
+                android:layout_height="60px">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical">
+
+                    <ImageView
+                        android:layout_width="16px"
+                        android:layout_height="16px"
+                        android:src="@mipmap/huanyi" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="20px"
+                        android:layout_marginLeft="6px"
+                        android:text="还衣规则"
+                        android:textColor="#FF1A1A1A"
+                        android:textSize="14px"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="6px"
+                    android:layout_height="12px"
+                    android:layout_gravity="right|center"
+                    android:layout_marginRight="20px"
+                    android:src="@mipmap/right" />
+            </FrameLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="#FFEFEFEF" />
+
+            <FrameLayout
+                android:id="@+id/logisticsdistribution"
+                android:layout_width="match_parent"
+                android:layout_height="60px">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical">
+
+                    <ImageView
+                        android:layout_width="16px"
+                        android:layout_height="16px"
+                        android:src="@mipmap/wuliu" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="20px"
+                        android:layout_marginLeft="6px"
+                        android:text="物流配送"
+                        android:textColor="#FF1A1A1A"
+                        android:textSize="14px"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="6px"
+                    android:layout_height="12px"
+                    android:layout_gravity="right|center"
+                    android:layout_marginRight="20px"
+                    android:src="@mipmap/right" />
+            </FrameLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="#FFEFEFEF" />
+
+            <FrameLayout
+                android:id="@+id/orderproblem"
+                android:layout_width="match_parent"
+                android:layout_height="60px">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical">
+
+                    <ImageView
+                        android:layout_width="16px"
+                        android:layout_height="16px"
+                        android:src="@mipmap/dingdanwenti" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="20px"
+                        android:layout_marginLeft="6px"
+                        android:text="订单问题"
+                        android:textColor="#FF1A1A1A"
+                        android:textSize="14px"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="6px"
+                    android:layout_height="12px"
+                    android:layout_gravity="right|center"
+                    android:layout_marginRight="20px"
+                    android:src="@mipmap/right" />
+            </FrameLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="#FFEFEFEF" />
+
+            <FrameLayout
+                android:id="@+id/qxfw"
+                android:layout_width="match_parent"
+                android:layout_height="60px">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical">
+
+                    <ImageView
+                        android:layout_width="16px"
+                        android:layout_height="16px"
+                        android:src="@mipmap/qingxi" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="20px"
+                        android:layout_marginLeft="6px"
+                        android:text="清洗服务"
+                        android:textColor="#FF1A1A1A"
+                        android:textSize="14px"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="6px"
+                    android:layout_height="12px"
+                    android:layout_gravity="right|center"
+                    android:layout_marginRight="20px"
+                    android:src="@mipmap/right" />
+            </FrameLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="10px"
+                android:background="#FFF8F8F8" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="20px"
+                android:layout_marginTop="20px"
+                android:text="联系我们"
+                android:textColor="#FF676869"
+                android:textSize="14px" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20px"
+                android:text="拨打客服电话：010-52894251\n\n在微信后台留言：微信搜索“衣库app”\n\n媒体与商务合作：public@xykoo.cn\n\n服装品牌合作：public@xykoo.cn"
+                android:textColor="#FF676869"
+                android:textSize="12px" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

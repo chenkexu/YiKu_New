@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.dexfun.yiku.activity.getAddCardActivity">
+
+    <include layout="@layout/include_toolbar_left_btn" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="#FFEFEFEF" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        android:src="@drawable/getcard" />
+
+    <Button
+        android:layout_gravity="bottom"
+        android:id="@+id/getcard"
+        android:layout_width="match_parent"
+        android:layout_height="48px"
+        android:background="#FF1A1A1A"
+        android:text="立即购买"
+        android:textColor="#FFFFFFFF"
+        android:textSize="16px" />
+    </FrameLayout>
+</LinearLayout>

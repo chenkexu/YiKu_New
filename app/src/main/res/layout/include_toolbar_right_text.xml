@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/title"
+    android:layout_width="match_parent"
+    android:layout_height="44px"
+    android:background="?attr/colorPrimary"
+    android:orientation="horizontal">
+
+    <TextView
+        android:id="@+id/include_right_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="20px"
+        android:gravity="center"
+        android:text="明细"
+        android:textColor="#E72D2D"
+        android:textSize="14px" />
+
+    <TextView
+        android:id="@+id/include_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:ellipsize="end"
+        android:maxEms="10"
+        android:maxLines="1"
+        android:singleLine="true"
+        android:text="Default Title"
+        android:textColor="@color/black"
+        android:textSize="15px"
+        android:textStyle="bold" />
+</RelativeLayout>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.dexfun.yiku.activity.CouponsListActivity">
+
+    <include layout="@layout/include_toolbar_left_btn" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="#FFEFEFEF" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0px"
+        android:layout_marginTop="20px"
+        android:layout_weight="1">
+
+        <TextView
+            android:id="@+id/sts"
+            android:layout_width="wrap_content"
+            android:layout_height="22px"
+            android:layout_gravity="center"
+            android:text="暂无卡券"
+            android:textColor="#FFCCCCCC"
+            android:textSize="16px" />
+
+        <ListView
+            android:id="@+id/list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/white"
+            android:divider="#FFF"
+            android:dividerHeight="6dp" />
+    </FrameLayout>
+
+    <Button
+        android:id="@+id/btn_no"
+        android:layout_width="match_parent"
+        android:layout_height="60px"
+        android:background="@color/black"
+        android:text="不使用优惠券"
+        android:textColor="@color/white"
+        android:visibility="gone"/>
+
+    <android.support.design.widget.TabLayout
+        android:id="@+id/tab_coup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    </android.support.design.widget.TabLayout>
+</LinearLayout>

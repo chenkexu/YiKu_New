@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.dexfun.yiku.activity.AboutActivity">
+
+    <include layout="@layout/include_toolbar_left_btn" />
+
+    <View
+        android:layout_width="375px"
+        android:layout_height="1px"
+        android:background="#FFEFEFEF" />
+
+    <ImageView
+        android:layout_width="86px"
+        android:layout_height="68px"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="40px"
+        android:src="@mipmap/copyx" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="28px"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="10px"
+        android:text="衣库"
+        android:textColor="#FF1A1A1A"
+        android:textSize="20px"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/vs"
+        android:layout_width="wrap_content"
+        android:layout_height="17px"
+        android:layout_gravity="center_horizontal"
+        android:text="1.0.0版"
+        android:textColor="#FFFF6C6A"
+        android:textSize="12px" />
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center_horizontal|bottom"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/id_xieyi"
+            android:layout_width="wrap_content"
+            android:layout_height="17px"
+            android:text="衣库用户协议"
+            android:textColor="#FF4A90E2"
+            android:textSize="12px" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="14px"
+            android:layout_marginBottom="100px"
+            android:text="Copyright © 2017-2018 Xykoo"
+            android:textColor="#FFAFAFAF"
+            android:textSize="10px" />
+    </LinearLayout>
+</LinearLayout>

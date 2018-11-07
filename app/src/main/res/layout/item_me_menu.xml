@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.dexfun.yiku.widget.SquareLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white">
+
+        <ImageView
+            android:id="@+id/menu_icon"
+            android:layout_width="26px"
+            android:layout_height="26px"
+            android:layout_centerInParent="true"
+            android:src="@drawable/lollipop" />
+
+        <TextView
+            android:visibility="gone"
+            android:id="@+id/menu_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@+id/menu_icon"
+            android:layout_above="@id/menu_icon"
+            android:background="@color/red"
+            android:padding="2px"
+            android:text="限时活动"
+            android:textColor="@color/white"
+            android:textSize="8px" />
+
+        <TextView
+            android:id="@+id/menu_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/menu_icon"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="8px"
+            android:autoSizeMaxTextSize="14px"
+            android:text="这是菜单"
+            android:textColor="#1A1A1A"
+            android:textSize="14px" />
+    </RelativeLayout>
+</com.dexfun.yiku.widget.SquareLinearLayout>

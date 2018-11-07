@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.dexfun.yiku.activity.PocketActivity">
+
+    <include layout="@layout/include_toolbar_left_btn_right_btn" />
+
+    <View
+        android:layout_width="375px"
+        android:layout_height="1px"
+        android:background="#FFEFEFEF" />
+
+   <!-- <include layout="@layout/include_tab"/>-->
+    <com.dexfun.yiku.widget.EnhanceTabLayout
+        android:id="@+id/tab_on"
+        style="@style/tablayout_style"
+        app:tab_Mode="mode_fixed"
+        android:layout_marginBottom="0dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="10px"
+        android:background="#FFF8F8F8" />
+
+    <ListView
+        android:id="@+id/list_on"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+
+    </ListView>
+
+    <Button
+        android:id="@+id/btn_go"
+        android:layout_width="match_parent"
+        android:layout_height="49px"
+        android:background="#FFF34520"
+        android:gravity="center"
+        android:text="预约归还"
+        android:textColor="#FFFFFFFF"
+        android:textSize="14px"
+        android:visibility="gone"
+        />
+
+</LinearLayout>

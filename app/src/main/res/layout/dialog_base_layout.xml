@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/login_dialog"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/transparent"
+    android:orientation="vertical">
+
+    <View
+        android:layout_width="9999999999dp"
+        android:layout_height="0dp" />
+
+
+    <LinearLayout
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="48px"
+        android:layout_marginRight="48px"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/base_dialog_t"
+            android:layout_width="wrap_content"
+            android:layout_height="24px"
+            android:layout_marginBottom="33px"
+            android:layout_marginTop="33px"
+            android:gravity="center"
+            android:text="取消行程"
+            android:textColor="#FF1A1A1A"
+            android:textSize="16px"
+            android:textStyle="bold" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="#FFF5F7FA" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#F5F7FA"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal">
+
+            <FrameLayout
+                android:id="@+id/base_dialog_n"
+                android:layout_width="0dp"
+                android:layout_height="43px"
+                android:layout_marginRight="1px"
+                android:layout_weight="1"
+                android:background="@color/white">
+
+                <TextView
+                    android:id="@+id/base_dialog_n_t"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:text="取消"
+                    android:textColor="#FF1A1A1A"
+                    android:textSize="14px" />
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/base_dialog_y"
+                android:layout_width="0dp"
+                android:layout_height="43px"
+                android:layout_weight="1"
+                android:background="@color/colorAccent">
+
+                <TextView
+                    android:id="@+id/base_dialog_y_t"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:text="确认"
+                    android:textColor="@color/white"
+                    android:textSize="14px" />
+            </FrameLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

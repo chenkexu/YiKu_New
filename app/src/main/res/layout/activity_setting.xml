@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.dexfun.yiku.activity.SettingActivity">
+
+    <include layout="@layout/include_toolbar_left_btn" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="#FFEFEFEF" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:id="@+id/address_set"
+            android:layout_width="match_parent"
+            android:layout_height="60px"
+            android:paddingLeft="20px"
+            android:paddingRight="20px">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="20px"
+                android:layout_gravity="center_vertical"
+                android:gravity="center"
+                android:text="收货地址"
+                android:textColor="#FF1A1A1A"
+                android:textSize="14px" />
+
+            <ImageView
+                android:layout_width="6px"
+                android:layout_height="12px"
+                android:layout_gravity="right|center_vertical"
+                android:src="@mipmap/right" />
+
+        </FrameLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="#FFF5F5F5" />
+
+        <FrameLayout
+            android:id="@+id/scavenging_caching"
+            android:layout_width="match_parent"
+            android:layout_height="60px"
+            android:paddingLeft="20px"
+            android:paddingRight="20px">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="20px"
+                android:layout_gravity="center_vertical"
+                android:gravity="center"
+                android:text="清除缓存"
+                android:textColor="#FF1A1A1A"
+                android:textSize="14px" />
+
+            <TextView
+                android:id="@+id/caching_nb"
+                android:layout_width="wrap_content"
+                android:layout_height="20px"
+                android:layout_gravity="right|center_vertical"
+                android:gravity="center"
+                android:text="81.71M"
+                android:textColor="#FF1A1A1A"
+                android:textSize="14px" />
+
+        </FrameLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="#FFF5F5F5" />
+
+        <FrameLayout
+            android:id="@+id/up"
+            android:layout_width="match_parent"
+            android:layout_height="60px"
+            android:paddingLeft="20px"
+            android:paddingRight="20px">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="20px"
+                android:layout_gravity="center_vertical"
+                android:gravity="center"
+                android:text="检查更新"
+                android:textColor="#FF1A1A1A"
+                android:textSize="14px" />
+
+            <ImageView
+                android:layout_width="6px"
+                android:layout_height="12px"
+                android:layout_gravity="right|center_vertical"
+                android:src="@mipmap/right" />
+        </FrameLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="#FFF5F5F5" />
+
+        <FrameLayout
+            android:id="@+id/abt"
+            android:layout_width="match_parent"
+            android:layout_height="60px"
+            android:paddingLeft="20px"
+            android:paddingRight="20px">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="20px"
+                android:layout_gravity="center_vertical"
+                android:gravity="center"
+                android:text="关于我们"
+                android:textColor="#FF1A1A1A"
+                android:textSize="14px" />
+
+            <ImageView
+                android:layout_width="6px"
+                android:layout_height="12px"
+                android:layout_gravity="right|center_vertical"
+                android:src="@mipmap/right" />
+        </FrameLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="10px"
+            android:background="#FFF8F8F8" />
+
+        <TextView
+            android:id="@+id/btn_logout"
+            android:layout_width="248px"
+            android:layout_height="40px"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="100px"
+            android:background="#FFF5F5F5"
+            android:gravity="center"
+            android:text="退出账号"
+            android:textColor="#FF676869"
+            android:textSize="12px" />
+    </LinearLayout>
+</LinearLayout>

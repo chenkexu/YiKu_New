@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.dexfun.yiku.activity.MessageActivity">
+
+    <include layout="@layout/include_toolbar_left_btn" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="#FFEFEFEF" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingLeft="20px">
+
+        <LinearLayout
+            android:id="@+id/vi_msg"
+            android:layout_width="match_parent"
+            android:layout_height="60px"
+            android:gravity="center_vertical"
+            android:paddingRight="20px">
+
+            <ImageView
+                android:layout_width="20px"
+                android:layout_height="20px"
+                android:src="@mipmap/msg_icon" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="20px"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="10px"
+                android:gravity="center"
+                android:text="系统通知"
+                android:textColor="#FF1A1A1A"
+                android:textSize="16px" />
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:layout_width="6px"
+                    android:layout_height="20px"
+                    android:layout_gravity="right"
+                    android:scaleType="centerInside"
+                    android:src="@mipmap/right" />
+            </FrameLayout>
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="#FFF5F5F5" />
+
+        <LinearLayout
+            android:id="@+id/vi_hd_msg"
+            android:layout_width="match_parent"
+            android:layout_height="60px"
+            android:paddingRight="20px"
+            android:paddingTop="20px">
+
+            <ImageView
+                android:layout_width="20px"
+                android:layout_height="20px"
+                android:src="@mipmap/huodong" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10px"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="20px"
+                    android:gravity="center"
+                    android:text="活动消息"
+                    android:textColor="#FF1A1A1A"
+                    android:textSize="16px" />
+
+            </LinearLayout>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:layout_width="6px"
+                    android:layout_height="20px"
+                    android:layout_gravity="right"
+                    android:scaleType="centerInside"
+                    android:src="@mipmap/right" />
+            </FrameLayout>
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="#FFF8F8F8" />
+
+
+        <LinearLayout
+            android:id="@+id/vi_logistics"
+            android:layout_width="match_parent"
+            android:layout_height="60px"
+            android:paddingRight="20px"
+            android:paddingTop="20px">
+
+            <ImageView
+                android:layout_width="20px"
+                android:layout_height="20px"
+                android:src="@mipmap/logistics_icon" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10px"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="20px"
+                    android:gravity="center"
+                    android:text="交易物流消息"
+                    android:textColor="#FF1A1A1A"
+                    android:textSize="16px" />
+
+                <ImageView
+                    android:layout_width="24px"
+                    android:layout_height="12px"
+                    android:layout_marginLeft="8px"
+                    android:src="@mipmap/new1" />
+            </LinearLayout>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:layout_width="6px"
+                    android:layout_height="20px"
+                    android:layout_gravity="right"
+                    android:scaleType="centerInside"
+                    android:src="@mipmap/right" />
+            </FrameLayout>
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="#FFF5F5F5" />
+    </LinearLayout>
+</LinearLayout>

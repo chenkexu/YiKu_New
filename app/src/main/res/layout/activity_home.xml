@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context=".HomeActivity">
+
+    <FrameLayout
+        android:id="@+id/frame"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/colorLine" />
+
+    <com.yinglan.alphatabs.AlphaTabsIndicator
+        android:id="@+id/bottomNavigationView"
+        android:layout_width="match_parent"
+        android:layout_height="49px"
+        android:orientation="horizontal"
+        android:paddingBottom="4dp"
+        android:paddingTop="8dp">
+
+        <com.yinglan.alphatabs.AlphaTabView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            app:badgeBackgroundColor="@color/colorAccent"
+            app:paddingTexwithIcon="5dp"
+            app:tabIconNormal="@mipmap/shouye2"
+            app:tabIconSelected="@mipmap/shouye1"
+            app:tabText="首页"
+            app:tabTextSize="10sp"
+            app:textColorNormal="@color/black"
+            app:textColorSelected="@color/black" />
+
+        <com.yinglan.alphatabs.AlphaTabView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            app:badgeBackgroundColor="@color/colorAccent"
+            app:paddingTexwithIcon="5dp"
+            app:tabIconNormal="@mipmap/xuanyi2"
+            app:tabIconSelected="@mipmap/xuanyi3"
+            app:tabText="选衣"
+            app:tabTextSize="10sp"
+            app:textColorNormal="@color/black"
+            app:textColorSelected="@color/black" />
+
+        <com.yinglan.alphatabs.AlphaTabView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            app:badgeBackgroundColor="@color/colorAccent"
+            app:paddingTexwithIcon="5dp"
+            app:tabIconNormal="@mipmap/xinyuandan"
+            app:tabIconSelected="@mipmap/xinyuandan1"
+            app:tabText="心愿单"
+            app:tabTextSize="10sp"
+            app:textColorNormal="@color/black"
+            app:textColorSelected="@color/black" />
+
+        <com.yinglan.alphatabs.AlphaTabView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            app:badgeBackgroundColor="@color/colorAccent"
+            app:paddingTexwithIcon="5dp"
+            app:tabIconNormal="@mipmap/yidai2"
+            app:tabIconSelected="@mipmap/yidai3"
+            app:tabText="衣袋"
+            app:tabTextSize="10sp"
+            app:textColorNormal="@color/black"
+            app:textColorSelected="@color/black" />
+
+        <com.yinglan.alphatabs.AlphaTabView
+            android:id="@+id/btn_me_view"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            app:badgeBackgroundColor="@color/colorAccent"
+            app:paddingTexwithIcon="5dp"
+            app:tabIconNormal="@mipmap/wode2"
+            app:tabIconSelected="@mipmap/wode3"
+            app:tabText="我的"
+            app:tabTextSize="10sp"
+            app:textColorNormal="@color/black"
+            app:textColorSelected="@color/black" />
+    </com.yinglan.alphatabs.AlphaTabsIndicator>
+
+
+</LinearLayout>

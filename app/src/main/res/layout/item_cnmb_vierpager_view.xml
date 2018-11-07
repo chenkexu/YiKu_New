@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+
+    <LinearLayout
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10px"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <com.dexfun.yiku.widget.CenterImage
+                android:id="@+id/push_icon"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true" />
+
+            <ImageView
+                android:visibility="invisible"
+                android:id="@+id/yx22"
+                android:layout_width="38px"
+                android:layout_height="18px"
+                android:layout_gravity="bottom|right"
+                android:layout_marginRight="7px"
+                android:layout_marginBottom="7px"
+                android:src="@mipmap/zyw" />
+        </FrameLayout>
+
+        <LinearLayout
+            android:layout_width="168px"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10px"
+            android:layout_marginBottom="18px"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/push_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="17px"
+                    android:layout_weight="1"
+                    android:gravity="left|center_vertical"
+                    android:text="Supreme"
+                    android:textColor="@color/black"
+                    android:textSize="12px" />
+
+                <TextView
+                    android:id="@+id/free_t1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="17px"
+                    android:background="@drawable/bg_rbq"
+                    android:gravity="center"
+                    android:paddingLeft="7px"
+                    android:paddingTop="3px"
+                    android:paddingRight="7px"
+                    android:paddingBottom="3px"
+                    android:text="FREE"
+                    android:textColor="#FFFFFFFF"
+                    android:textSize="10px" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/push_subtitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="17px"
+                    android:layout_marginTop="6px"
+                    android:layout_weight="1"
+                    android:gravity="left|center_vertical"
+                    android:text="Supreme DDs"
+                    android:textSize="10px" />
+
+                <TextView
+                    android:id="@+id/free_t2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="14px"
+                    android:layout_marginTop="6px"
+                    android:gravity="center"
+                    android:text="开通会员免费穿"
+                    android:textColor="#3F9198"
+                    android:textSize="10px" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="10px"
+        android:layout_height="wrap_content" />
+
+    <LinearLayout
+        android:id="@+id/view1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="10px"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <com.dexfun.yiku.widget.CenterImage
+                android:id="@+id/push_icon1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true" />
+
+            <ImageView
+                android:visibility="invisible"
+                android:id="@+id/yx2"
+                android:layout_width="38px"
+                android:layout_height="18px"
+                android:layout_gravity="bottom|right"
+                android:layout_marginRight="7px"
+                android:layout_marginBottom="7px"
+                android:src="@mipmap/zyw" />
+        </FrameLayout>
+
+
+        <LinearLayout
+            android:layout_width="168px"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10px"
+            android:layout_marginBottom="18px"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/push_title1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="17px"
+                    android:layout_weight="1"
+                    android:gravity="left|center_vertical"
+                    android:text="Supreme"
+                    android:textColor="@color/black"
+                    android:textSize="12px" />
+
+                <TextView
+                    android:id="@+id/free_t3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="17px"
+                    android:background="@drawable/bg_rbq"
+                    android:gravity="center"
+                    android:paddingLeft="7px"
+                    android:paddingTop="3px"
+                    android:paddingRight="7px"
+                    android:paddingBottom="3px"
+                    android:text="FREE"
+                    android:textColor="#FFFFFFFF"
+                    android:textSize="10px" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/push_subtitle1"
+                    android:layout_width="match_parent"
+                    android:layout_height="17px"
+                    android:layout_marginTop="6px"
+                    android:layout_weight="1"
+                    android:gravity="left|center_vertical"
+                    android:text="Supreme DDs"
+                    android:textSize="10px" />
+
+                <TextView
+                    android:id="@+id/free_t4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="14px"
+                    android:layout_marginTop="6px"
+                    android:gravity="center"
+                    android:text="开通会员免费穿"
+                    android:textColor="#3F9198"
+                    android:textSize="10px" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

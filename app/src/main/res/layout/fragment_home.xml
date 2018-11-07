@@ -1,0 +1,65 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    tools:context="com.dexfun.yiku.fragment.HomeFragment">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="54px"
+            android:scaleType="centerInside"
+            android:src="@mipmap/home_logo" />
+
+        <ImageView
+            android:id="@+id/vi_msg"
+            android:layout_width="20px"
+            android:layout_height="20px"
+            android:layout_gravity="right|center_vertical"
+            android:layout_marginRight="24px"
+            android:scaleType="centerInside"
+            android:src="@mipmap/wuxiaoxi"
+            android:visibility="gone" />
+    </FrameLayout>
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="#FFEEEEEE" />
+
+    <android.support.design.widget.TabLayout
+        android:id="@+id/main_tab"
+        android:layout_marginBottom="5px"
+        app:tabIndicatorColor="#EE2D2D"
+        android:layout_width="match_parent"
+        android:layout_height="42px"
+        />
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/main_view_pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <com.scwang.smartrefresh.layout.SmartRefreshLayout
+        android:id="@+id/home_refresh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:srlEnableAutoLoadmore="false"
+        app:srlEnableNestedScrolling="true"
+        app:srlEnableRefresh="false">
+
+        <com.dexfun.yiku.widget.GridViewWithHeaderAndFooter
+            android:id="@+id/grid_view"
+            android:horizontalSpacing="-10dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:numColumns="2" />
+    </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+</LinearLayout>
+

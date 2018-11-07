@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+        <LinearLayout
+            android:id="@+id/view_local"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!--<LinearLayout-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_marginLeft="20px"-->
+                <!--android:gravity="center_vertical"-->
+                <!--android:orientation="horizontal">-->
+
+                <!--<View-->
+                    <!--android:layout_width="3px"-->
+                    <!--android:layout_height="16px"-->
+                    <!--android:background="#FFFDDD55" />-->
+
+                <!--<TextView-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="22px"-->
+                    <!--android:layout_gravity="center_vertical"-->
+                    <!--android:layout_marginLeft="6px"-->
+                    <!--android:layout_marginRight="40px"-->
+                    <!--android:gravity="center"-->
+                    <!--android:text="风格选择"-->
+                    <!--android:textColor="#FF1A1A1A"-->
+                    <!--android:textSize="16px"-->
+                    <!--android:textStyle="bold" />-->
+            <!--</LinearLayout>-->
+
+            <GridView
+                android:id="@+id/tab_st"
+                android:layout_width="wrap_content"
+                android:layout_height="105px"
+                android:numColumns="4" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="10px"
+                android:background="#FFFAFAFA"
+                />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="48px"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="17px"
+                    android:text="单品推荐"
+                    android:textColor="#FF1A1A1A"
+                    android:textSize="12px"
+                    android:layout_marginTop="15px"
+                    android:layout_marginLeft="11px"
+                    android:layout_marginBottom="20px"
+                    android:layout_marginRight="37px"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="17px"
+                    android:text="在架优先"
+                    android:textColor="#FF999999"
+                    android:textSize="12px"
+                    android:layout_marginTop="15px"
+                    android:layout_marginBottom="20px"
+                    android:layout_marginRight="6px"
+                    />
+                <ImageView
+                    android:layout_width="7px"
+                    android:layout_height="7px"
+                    android:src="@mipmap/youxian"
+                    android:layout_marginTop="18px"
+                    android:layout_marginBottom="20px"
+                    android:layout_marginLeft="5px"
+                    />
+                <TextView
+                    android:id="@+id/AllScreening"
+                    android:layout_width="wrap_content"
+                    android:layout_height="17px"
+                    android:text="全部筛选 >"
+                    android:textColor="#FFF34520"
+                    android:textSize="12px"
+                    android:layout_marginLeft="130px"
+                    android:layout_marginTop="16px"
+                    android:layout_marginBottom="20px"
+                    />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="#FAFAFA"
+                android:layout_marginBottom="11px"
+                />
+            <!--<LinearLayout-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_marginLeft="20px"-->
+                <!--android:layout_marginTop="14px"-->
+                <!--android:gravity="center_vertical"-->
+                <!--android:orientation="horizontal">-->
+
+                <!--<View-->
+                    <!--android:layout_width="3px"-->
+                    <!--android:layout_height="16px"-->
+                    <!--android:background="#FFFDDD55" />-->
+
+                <!--<TextView-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="22px"-->
+                    <!--android:layout_gravity="center_vertical"-->
+                    <!--android:layout_marginLeft="6px"-->
+                    <!--android:gravity="center"-->
+                    <!--android:text="品类"-->
+                    <!--android:textColor="#FF1A1A1A"-->
+                    <!--android:textSize="16px"-->
+                    <!--android:textStyle="bold" />-->
+
+            <!--</LinearLayout>-->
+
+            <!--<android.support.design.widget.TabLayout-->
+                <!--android:id="@+id/tab_pl"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="30px"-->
+                <!--android:layout_marginLeft="24px"-->
+                <!--android:layout_marginTop="14px"-->
+                <!--app:tabIndicatorColor="#EE2D2D"-->
+                <!--app:tabMode="scrollable" />-->
+
+            <!--<LinearLayout-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_marginLeft="20px"-->
+                <!--android:layout_marginTop="24px"-->
+                <!--android:gravity="center_vertical"-->
+                <!--android:orientation="horizontal">-->
+
+                <!--<View-->
+                    <!--android:layout_width="3px"-->
+                    <!--android:layout_height="16px"-->
+                    <!--android:background="#FFFDDD55" />-->
+
+                <!--<TextView-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="22px"-->
+                    <!--android:layout_gravity="center_vertical"-->
+                    <!--android:layout_marginLeft="6px"-->
+                    <!--android:layout_marginRight="40px"-->
+                    <!--android:gravity="center"-->
+                    <!--android:text="排序"-->
+                    <!--android:textColor="#FF1A1A1A"-->
+                    <!--android:textSize="16px"-->
+                    <!--android:textStyle="bold" />-->
+            <!--</LinearLayout>-->
+
+            <!--<android.support.design.widget.TabLayout-->
+                <!--android:id="@+id/tab_px"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="30px"-->
+                <!--android:layout_marginLeft="24px"-->
+                <!--android:layout_marginTop="14px"-->
+                <!--app:tabIndicatorColor="#EE2D2D"-->
+                <!--app:tabMode="scrollable" />-->
+        </LinearLayout>
+
+        <!--<View-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="1px"-->
+            <!--android:layout_marginBottom="24px"-->
+            <!--android:layout_marginTop="24px"-->
+            <!--android:background="#FFF4F4F4" />-->
+
+    </LinearLayout>
+</LinearLayout>

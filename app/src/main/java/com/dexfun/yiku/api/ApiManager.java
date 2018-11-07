@@ -1,9 +1,9 @@
-package com.mix.easycalculator.api;
+package com.dexfun.yiku.api;
 
+import com.dexfun.yiku.BuildConfig;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
-import com.mix.easycalculator.base.SysUrls;
-import com.mix.easycalculator.util.Logger;
+import com.orhanobut.logger.Logger;
 
 import java.util.concurrent.TimeUnit;
 
@@ -52,7 +52,7 @@ public class ApiManager {
 
         OkHttpClient client = builder.build();
         mRetrofit = new Retrofit.Builder()
-                .baseUrl(SysUrls.Base_URL)
+                .baseUrl(BuildConfig.API_HOST)
                 .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
                 .addConverterFactory(GsonConverterFactory.create(mGson))
                 .client(client)
@@ -73,7 +73,7 @@ public class ApiManager {
         HttpLoggingInterceptor loggingInterceptor = new HttpLoggingInterceptor(new HttpLoggingInterceptor.Logger() {
             @Override
             public void log(String message) {
-                Logger.d("Retrofit====Message:" + message);
+                Logger.d(message);
             }
         });
         loggingInterceptor.setLevel(level);

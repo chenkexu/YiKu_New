@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.dexfun.yiku.activity.DepositActivity">
+
+    <include layout="@layout/include_toolbar_left_btn" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="#FFEFEFEF" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="20px"
+        android:layout_marginTop="40px"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_status"
+            android:layout_width="wrap_content"
+            android:layout_height="25px"
+            android:text="缴纳押金享受以下权益"
+            android:textColor="#FF1A1A1A"
+            android:textSize="18px"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginTop="60px"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="28px"
+                android:layout_height="28px"
+                android:src="@mipmap/zuyi" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="22px"
+                android:layout_marginLeft="10px"
+                android:gravity="center"
+                android:text="租衣无次数限制"
+                android:textColor="#FF1A1A1A"
+                android:textSize="16px" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginTop="40px"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:tint="@color/black"
+                android:layout_width="28px"
+                android:layout_height="28px"
+                android:src="@mipmap/sf" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="22px"
+                android:layout_marginLeft="10px"
+                android:gravity="center"
+                android:text="往返包邮"
+                android:textColor="#FF1A1A1A"
+                android:textSize="16px" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginTop="40px"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="28px"
+                android:layout_height="28px"
+                android:src="@mipmap/qingxi" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="22px"
+                android:layout_marginLeft="10px"
+                android:gravity="center"
+                android:text="由衣库专业清洗衣物"
+                android:textColor="#FF1A1A1A"
+                android:textSize="16px" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/btn_buy"
+        android:layout_width="match_parent"
+        android:layout_height="49px"
+        android:background="#FFF8F8F8"
+        android:gravity="center"
+        android:text="缴纳押金"
+        android:textColor="#FFAFAFAF"
+        android:textSize="14px" />
+</LinearLayout>

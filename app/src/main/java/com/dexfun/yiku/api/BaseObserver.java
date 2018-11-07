@@ -1,11 +1,7 @@
-package com.mix.easycalculator.api;
+package com.dexfun.yiku.api;
 
 import android.accounts.NetworkErrorException;
 import android.content.Context;
-
-import com.mix.easycalculator.R;
-import com.mix.easycalculator.util.Logger;
-import com.mix.easycalculator.util.UIUtils;
 
 import java.net.ConnectException;
 import java.net.SocketTimeoutException;
@@ -51,9 +47,9 @@ public  abstract class BaseObserver<T> implements Observer<ApiResponse<T>> {
                 || e instanceof NetworkErrorException
                 || e instanceof UnknownHostException
                 || e instanceof SocketTimeoutException) {
-            onFailure(UIUtils.getString(R.string.no_network),true);
+            onFailure("无网络",true);
         } else {
-            onFailure(UIUtils.getString(R.string.no_network),false);
+            onFailure("无网络",false);
         }
     }
 
@@ -73,7 +69,7 @@ public  abstract class BaseObserver<T> implements Observer<ApiResponse<T>> {
     protected abstract void onSuccees(ApiResponse<T> t);
 
     //返回失败
-    protected abstract void onFailure(String errorInfo,boolean isNetWorkError);
+    protected abstract void onFailure(String errorInfo, boolean isNetWorkError);
 
 
 

@@ -1,0 +1,204 @@
+apply plugin: 'com.android.application'
+
+android {
+    def DEV_API_HOST = "\"http://api.xykoo.cn\""
+    compileSdkVersion 26
+    defaultConfig {
+        applicationId "com.dexfun.yiku"
+        minSdkVersion 17
+        targetSdkVersion 26
+        versionCode 38
+        versionName "1.5.3"
+        multiDexEnabled true
+        ndk {
+            abiFilters 'armeabi', 'armeabi-v7a', 'x86', 'arm64-v8a'
+        }
+        buildConfigField("String", "API_HOST", "${DEV_API_HOST}")
+        manifestPlaceholders = [
+                GETUI_APP_ID    : "2ODogJlGyr9QQLSnhi4316",
+                GETUI_APP_KEY   : "REYkiqa1u864kyVaC3IPD7",
+                GETUI_APP_SECRET: "vnVOQu6HYV9Df78fpBqYY3",
+
+                JPUSH_PKGNAME   : applicationId,
+                JPUSH_APPKEY    : "606b4c09d0d05438e3277d63", //JPush上注册的包名对应的appkey.
+                JPUSH_CHANNEL   : "developer-default", //暂时填写默认值即可.
+//                MTA_APPKEY      : "AEZFPN843R6P",
+                MTA_APPKEY      : "AGNQ18V3YH1B",
+                MTA_CHANNEL     : "她社区"
+        ]
+        javaCompileOptions {
+            annotationProcessorOptions {
+                arguments = [eventBusIndex: 'com.dexfun.yiku.entity.DEventBusIndex']
+            }
+        }
+    }
+
+    signingConfigs {
+        release {
+            keyAlias 'yiku'
+            keyPassword 'SugcsvgMpfqFQFsP'
+            storeFile file('YiKu.jks')
+            storePassword 'SugcsvgMpfqFQFsP'
+        }
+    }
+
+    buildTypes {
+        debug {
+            signingConfig signingConfigs.release
+        }
+        release {
+            minifyEnabled false
+            signingConfig signingConfigs.release
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            zipAlignEnabled false
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    dexOptions {
+        javaMaxHeapSize "4g"
+    }
+}
+
+dependencies {
+
+    //    compile fileTree(include: ['*.jar'], dir: 'libs')
+
+    //noinspection GradleDependency
+    implementation 'com.lzy.net:okgo:2.1.4'
+
+    //noinspection GradleDependency
+    implementation 'com.lzy.net:okserver:1.1.3'
+    //noinspection GradleCompatible
+    implementation 'com.android.support:support-v4:26.1.0'
+    implementation('com.yinglan.alphatabs:library:1.0.8') {
+        exclude group: 'com.android.support'
+    }
+    implementation 'com.squareup.picasso:picasso:2.71828'
+
+    implementation 'com.google.code.gson:gson:2.8.5'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.8.1'
+    implementation 'com.jakewharton:butterknife:8.8.1'
+
+    //noinspection GradleDependency
+    implementation project(':PxLayout')
+
+    //implementation 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.18'
+
+    //    compile('com.github.gzu-liyujiang.AndroidPicker:WheelPicker:1.5.5') {
+
+    //        exclude group: 'com.android.support'
+
+    //    }
+    implementation 'com.android.support.constraint:constraint-layout:1.1.3'
+
+    //    implementation 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.18'
+    implementation('de.hdodenhof:circleimageview:2.2.0') {
+        exclude group: 'com.android.support'
+    }
+
+    //    implementation 'com.github.chrisbanes:PhotoView:2.1.3'
+
+    //    implementation 'com.github.LillteZheng:ViewPagerHelper:v0.1'
+    implementation files('libs/GetuiSDK2.11.1.0.jar')
+    implementation files('libs/alipaySingle-20170510.jar')
+    implementation 'com.tencent.mm.opensdk:wechat-sdk-android-without-mta:1.1.6'
+    implementation 'org.greenrobot:eventbus:3.1.1'
+    annotationProcessor 'org.greenrobot:eventbus-annotation-processor:3.1.1'
+    implementation('com.github.fodroid:XRadioGroup:v1.1') {
+        exclude group: 'com.android.support'
+    }
+    implementation('com.github.Kennyc1012:MultiStateView:1.3.2') {
+        exclude group: 'com.android.support'
+    }
+
+    //    compile 'com.lzy.widget:imagepicker:0.6.1'
+    implementation('com.github.addappcn:android-pickers:1.0.1') {
+        exclude group: 'com.android.support'
+    }
+    implementation project(':share')
+    implementation('com.scwang.smartrefresh:SmartRefreshLayout:1.0.3') {
+        exclude group: 'com.android.support'
+    }
+    implementation('me.relex:circleindicator:1.2.2@aar') {
+        exclude group: 'com.android.support'
+    }
+    implementation('com.bigkoo:convenientbanner:2.0.5') {
+        exclude group: 'com.android.support'
+    }
+    implementation 'com.king.thread:nevercrash:1.0.0'
+
+    implementation project(':IMKit')
+
+    implementation project(':IMLib')
+    implementation files('libs/bcprov-jdk15on-159.jar')
+    implementation('com.kelin.scrollablepanel:library:1.2.0') {
+        exclude group: 'com.android.support'
+    }
+
+    //    compile 'com.jinqiu:scalerecyclerpager:1.0.1'
+
+    //     mta包稳定版和测试版本二选一，mid包必须要添加 ，可视化埋点根据需要添加
+
+    //
+
+    //mta 3.3 稳定版
+    implementation 'com.qq.mta:mta:3.4.2'
+
+    //
+
+    //mid  jar包 必须添加
+    implementation 'com.tencent.mid:mid:3.73-release'
+
+    //
+
+    //可视化埋点的相关jar包 （根据需要添加），可视化埋点的版本号，和必须和当前MTA的版本号必须匹配使用 需要在配置文件中增加配置，具体请参考 高级功能中可视化埋点的接入。
+    implementation 'com.qq.visual:visual:3.3.1-release'
+    implementation('com.github.bumptech.glide:glide:3.7.0') {
+        exclude group: 'com.android.support'
+    }
+    implementation project(':imagepicker')
+    implementation('top.zibin:Luban:1.1.4') {
+        exclude group: 'com.android.support'
+    }
+    implementation 'com.android.support:exifinterface:26.1.0'
+    implementation 'com.android.support:recyclerview-v7:26.1.0'
+    implementation 'com.android.support:appcompat-v7:26.1.0'
+    implementation 'com.android.support:support-compat:26.1.0'
+    implementation 'cc.solart:turbo-recyclerview-helper:1.0.3-beta'
+
+    //    compile 'com.belerweb:pinyin4j:2.5.0'
+
+    //    compile 'com.mindflow:py4j:1.0.0'
+
+    //    implementation files('libs/pinyin4j.jar')
+
+    //    implementation files('libs/pinyinsearch.jar')
+    implementation 'com.github.open-android:pinyin4j:2.5.0'
+    implementation 'cn.jiguang.sdk:jpush:3.1.1'
+
+    // 此处以JPush 3.1.1 版本为例。
+    implementation 'cn.jiguang.sdk:jcore:1.1.9'
+
+    // 此处以JCore 1.1.9 版本为例。
+    implementation 'com.android.support:design:26.1.0'
+
+    //万能适配器
+    implementation 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.30'
+
+    //tab
+    compile 'com.flyco.tablayout:FlycoTabLayout_Lib:2.1.2@aar'
+
+    /*rx-android-java*/
+    compile 'io.reactivex.rxjava2:rxjava:2.0.7'
+    compile 'io.reactivex.rxjava2:rxandroid:2.0.1'
+    /*rotrofit*/
+    compile 'com.squareup.retrofit2:retrofit:2.1.0'
+    compile 'com.squareup.retrofit2:adapter-rxjava2:2.2.0'
+    compile 'com.squareup.retrofit2:converter-gson:2.1.0'
+    compile 'com.squareup.okhttp3:logging-interceptor:3.6.0'
+    //打印日志
+    compile 'com.orhanobut:logger:2.1.1'
+}

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingLeft="20px"
+    android:paddingTop="12px">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="20px"
+        android:text="订单已发货"
+        android:textColor="#FFFF6D6A"
+        android:textSize="14px" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="54px"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="54px"
+            android:layout_height="54px" />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="12px">
+
+            <TextView
+                android:layout_width="215px"
+                android:layout_height="20px"
+                android:layout_gravity="top"
+                android:text="字母玫瑰印花连帽卫衣"
+                android:textColor="#FF1A1A1A"
+                android:textSize="14px" />
+
+            <TextView
+                android:layout_width="148px"
+                android:layout_height="17px"
+                android:layout_gravity="bottom"
+                android:text="运单编号：5278299267289"
+                android:textColor="#FF676869"
+                android:textSize="12px" />
+        </FrameLayout>
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.dexfun.yiku.activity.SizeTabActivity">
+
+    <include layout="@layout/include_toolbar_left_btn" />
+
+    <View
+        android:layout_width="375px"
+        android:layout_height="1px"
+        android:background="#FFEFEFEF" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60px"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="24px">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="20px"
+            android:layout_gravity="center_vertical"
+            android:text="肩宽"
+            android:textColor="@color/c999999"
+            android:textSize="16px" />
+
+
+        <EditText
+            android:id="@+id/tv_jw"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="40px"
+            android:background="@null"
+            android:inputType="numberDecimal"
+            android:hint="请点击此处填写"
+            android:textColor="#FF676869"
+            android:textSize="14px" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="375px"
+        android:layout_height="1px"
+        android:background="#FFEFEFEF" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60px"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="24px">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="20px"
+            android:layout_gravity="center_vertical"
+            android:text="胸围"
+            android:textColor="@color/c999999"
+            android:textSize="16px" />
+
+
+        <EditText
+            android:id="@+id/tv_xw"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="40px"
+            android:background="@null"
+            android:inputType="numberDecimal"
+            android:hint="请点击此处填写"
+            android:textColor="#FF676869"
+            android:textSize="14px" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="375px"
+        android:layout_height="1px"
+        android:background="#FFEFEFEF" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60px"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="24px">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="20px"
+            android:layout_gravity="center_vertical"
+            android:text="腰围"
+            android:textColor="@color/c999999"
+            android:textSize="16px" />
+
+
+        <EditText
+            android:id="@+id/tv_yw"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="40px"
+            android:background="@null"
+            android:inputType="numberDecimal"
+            android:hint="请点击此处填写"
+            android:textColor="#FF676869"
+            android:textSize="14px" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="375px"
+        android:layout_height="1px"
+        android:background="#FFEFEFEF" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60px"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="24px">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="20px"
+            android:layout_gravity="center_vertical"
+            android:text="臀围"
+            android:textColor="@color/c999999"
+            android:textSize="16px" />
+
+
+        <EditText
+            android:id="@+id/tv_tw"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="40px"
+            android:background="@null"
+            android:hint="请点击此处填写"
+            android:inputType="numberDecimal"
+            android:textColor="#FF676869"
+            android:textSize="14px" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="375px"
+        android:layout_height="1px"
+        android:background="#FFEFEFEF" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="10px"
+        android:background="#FFF4F4F4" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="20px"
+        android:layout_gravity="right"
+        android:layout_marginTop="14px"
+        android:text="（单位为CM）"
+        android:textColor="#FF999999"
+        android:textSize="14px" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16px"
+        android:src="@mipmap/mote" />
+</LinearLayout>
