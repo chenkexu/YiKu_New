@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merger version="3"><dataSet config="main"><source path="E:\yiku\YiKu_New_project\YiKu_New\IMKit\src\main\libs"><file name="Rong_IMKit.jar" path="E:\yiku\YiKu_New_project\YiKu_New\IMKit\src\main\libs\Rong_IMKit.jar"/></source></dataSet><dataSet config="debug"><source path="E:\yiku\YiKu_New_project\YiKu_New\IMKit\src\debug\jniLibs"/></dataSet></merger>

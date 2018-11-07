@@ -1,0 +1,32 @@
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion 26
+
+    defaultConfig {
+        minSdkVersion 15
+        targetSdkVersion 26
+        versionCode 2018022
+        versionName "2.8.28 Dev"
+    }
+
+    sourceSets {
+        main {
+            manifest.srcFile 'AndroidManifest.xml'
+            res.srcDirs = ['res']
+            jniLibs.srcDirs = ['libs']
+        }
+    }
+}
+
+dependencies {
+    api fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'com.android.support:support-compat:26.1.0'
+}
+
+repositories { flatDir { dirs '../push/aars' }
+    maven {
+        url 'https://maven.google.com/'
+        name 'Google'
+    }
+}
