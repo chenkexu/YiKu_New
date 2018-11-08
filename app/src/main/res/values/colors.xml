@@ -16,4 +16,8 @@
     <color name="transparent1">#BF252525</color>
     <color name="transparent2">#bfffffff</color>
     <color name="gray">#999999</color>
+
+    <color name="new_red">#F34520</color>
+
+
 </resources>

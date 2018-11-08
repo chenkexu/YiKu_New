@@ -1,17 +1,14 @@
 package com.dexfun.yiku.fragment;
 
-import android.graphics.Color;
 import android.support.annotation.Nullable;
-import android.view.View;
-import android.widget.ImageView;
-import android.widget.TextView;
 
-import com.bumptech.glide.Glide;
 import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.chad.library.adapter.base.BaseViewHolder;
 import com.dexfun.yiku.R;
 
 import java.util.List;
+
+
 
 public class OneAdapter extends BaseQuickAdapter<String, BaseViewHolder> {
     public OneAdapter(int layoutResId, @Nullable List<String> data) {
