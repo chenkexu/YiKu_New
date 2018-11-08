@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="verificationcodeview-1.0.0">
+    <CLASSES>
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/verificationcodeview-1.0.0.aar/46db0b5470803008148dfcf39f2ec4db/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/verificationcodeview-1.0.0.aar/46db0b5470803008148dfcf39f2ec4db/jars/classes.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.jyn.verificationcodeview/verificationcodeview/1.0.0/b73616938710ed557ebac536157e1729c136815b/verificationcodeview-1.0.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

@@ -3,28 +3,20 @@ package com.dexfun.yiku.fragment;
 
 import android.content.Context;
 import android.content.Intent;
-import android.content.SharedPreferences;
-import android.graphics.Color;
 import android.os.Bundle;
-import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
-import android.view.ViewGroup;
 import android.widget.AbsListView;
 import android.widget.AdapterView;
-import android.widget.CheckBox;
 import android.widget.GridView;
-import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.PopupWindow;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.dexfun.yiku.R;
 import com.dexfun.yiku.activity.DetailActivity;
 import com.dexfun.yiku.activity.WebViewActivity;
@@ -35,7 +27,6 @@ import com.dexfun.yiku.fragment.home.ItemChooseStAdapter;
 import com.dexfun.yiku.fragment.home.ItemPushViewAdapter2;
 import com.dexfun.yiku.service.impl.HttpServiceImpl;
 import com.dexfun.yiku.utils.AnimatorUtils;
-import com.dexfun.yiku.utils.SharedPreferencesUtil;
 import com.dexfun.yiku.widget.GridViewWithHeaderAndFooter;
 import com.scwang.smartrefresh.layout.SmartRefreshLayout;
 import com.scwang.smartrefresh.layout.api.RefreshLayout;
@@ -44,17 +35,11 @@ import com.scwang.smartrefresh.layout.footer.ClassicsFooter;
 import com.scwang.smartrefresh.layout.header.ClassicsHeader;
 import com.scwang.smartrefresh.layout.listener.OnLoadmoreListener;
 
-import org.greenrobot.eventbus.Subscribe;
-import org.greenrobot.eventbus.ThreadMode;
-
 import java.util.ArrayList;
 import java.util.List;
 
 import butterknife.BindView;
-import butterknife.ButterKnife;
 import butterknife.OnClick;
-import butterknife.Unbinder;
-import io.rong.eventbus.EventBus;
 
 public class ChooseFragment extends BaseFragment {
 

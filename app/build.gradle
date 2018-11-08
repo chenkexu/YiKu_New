@@ -201,4 +201,7 @@ dependencies {
     compile 'com.squareup.okhttp3:logging-interceptor:3.6.0'
     //打印日志
     compile 'com.orhanobut:logger:2.1.1'
+
+    //方形验证码输入框
+    compile 'com.jyn.verificationcodeview:verificationcodeview:1.0.0'
 }

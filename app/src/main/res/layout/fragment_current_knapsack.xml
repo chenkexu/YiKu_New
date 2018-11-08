@@ -35,6 +35,8 @@
             android:layout_marginTop="5px"/>
 
         <TextView
+            android:layout_marginRight="10dp"
+            android:layout_alignParentRight="true"
             android:layout_width="83px"
             android:layout_height="24px"
             android:text="使用加衣劵"

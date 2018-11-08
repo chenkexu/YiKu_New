@@ -1,11 +1,8 @@
 package com.dexfun.yiku.fragment;
 
-import android.graphics.Color;
 import android.support.annotation.Nullable;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.view.View;
-import android.widget.TextView;
 
 import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.chad.library.adapter.base.BaseViewHolder;
@@ -13,6 +10,8 @@ import com.dexfun.yiku.R;
 
 import java.util.ArrayList;
 import java.util.List;
+
+
 
 public class FourAdapter extends BaseQuickAdapter<Date1,BaseViewHolder> {
 

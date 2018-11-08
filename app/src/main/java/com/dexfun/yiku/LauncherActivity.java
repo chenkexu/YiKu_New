@@ -5,9 +5,7 @@ import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.CountDownTimer;
-import android.os.Handler;
 import android.text.TextUtils;
-import android.util.Base64;
 import android.view.KeyEvent;
 import android.view.View;
 import android.view.WindowManager;
@@ -23,12 +21,9 @@ import com.dexfun.yiku.service.impl.HttpServiceImpl;
 import com.dexfun.yiku.utils.SharedPreferencesUtil;
 import com.squareup.picasso.Picasso;
 
-import java.io.File;
-import java.io.InputStream;
 import java.text.DecimalFormat;
 
 import butterknife.BindView;
-import butterknife.OnClick;
 
 public class LauncherActivity extends BaseActivity {
 
@@ -40,6 +35,7 @@ public class LauncherActivity extends BaseActivity {
     private CountDownTimer timer;
 
     private String id = "null";
+
 
     @Override
     public int getLayoutId() {
